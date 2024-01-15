@@ -51,7 +51,7 @@ stages:
         appName: 'mahima'
         deployToSlotOrASE: true
         resourceGroupName: 'test'
-        slotName: 'staging'
+        slotName: 'mahima-staging'
         containers: '$(containerRegistry)/$(imageRepository):$(tag)'
 
     - task: AzureAppServiceManage@0
@@ -60,4 +60,11 @@ stages:
         Action: 'Swap Slots'
         WebAppName: 'mahima'
         ResourceGroupName: 'test'
-        SourceSlot: 'staging'
+        SourceSlot: 'mahima-staging'
+- task: AzureAppServiceManage@0
+  inputs:
+    azureSubscription: 'Mindtree_Azure_DevOps(e9735a76-e0fb-4c01-b485-f95afa5949d0)'
+    Action: 'Swap Slots'
+    WebAppName: 'mahima'
+    ResourceGroupName: 'test'
+    SourceSlot: 'staging'
