@@ -48,7 +48,7 @@ stages:
 
     - task: AzureWebAppContainer@1
       inputs:
-        azureSubscription: '<Azure service connection>'
+        azureSubscription: 'Mindtree_Azure_DevOps'
         appName: 'mahima'
         containers: $(containerRegistry)/$(imageRepository):$(tag)
         deployToSlotOrASE: true
@@ -57,7 +57,7 @@ stages:
 
     - task: AzureAppServiceManage@0
       inputs:
-        azureSubscription: '<Azure service connection>'
+        azureSubscription: 'Mindtree_Azure_DevOps'
         WebAppName: 'mahima'
         ResourceGroupName: 'test'
         SourceSlot: staging
