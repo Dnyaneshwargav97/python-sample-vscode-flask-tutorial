@@ -43,7 +43,7 @@ stages:
       displayName: 'Azure Web App on Container Deploy'
       inputs:
         azureSubscription: 'Mindtree_Azure_DevOps(e9735a76-e0fb-4c01-b485-f95afa5949d0)'
-        appName: '$(appName)'
+        appName: 'mahima'
         containers: '$(containerRegistry)/$(imageRepository):$(tag)'
 
     - task: AzureWebAppContainer@1
