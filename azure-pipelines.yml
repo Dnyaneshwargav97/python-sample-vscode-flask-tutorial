@@ -61,10 +61,3 @@ stages:
         WebAppName: 'mahima'
         ResourceGroupName: 'test'
         SourceSlot: 'mahima-staging'
-- task: AzureAppServiceManage@0
-  inputs:
-    azureSubscription: 'Mindtree_Azure_DevOps(e9735a76-e0fb-4c01-b485-f95afa5949d0)'
-    Action: 'Swap Slots'
-    WebAppName: 'mahima'
-    ResourceGroupName: 'test'
-    SourceSlot: 'staging'
