@@ -49,16 +49,16 @@ stages:
     - task: AzureWebAppContainer@1
       inputs:
         azureSubscription: '<Azure service connection>'
-        appName: '<Name of the web app>'
+        appName: 'mahima'
         containers: $(containerRegistry)/$(imageRepository):$(tag)
         deployToSlotOrASE: true
-        resourceGroupName: '<Name of the resource group>'
+        resourceGroupName: 'test'
         slotName: staging
 
     - task: AzureAppServiceManage@0
       inputs:
         azureSubscription: '<Azure service connection>'
-        WebAppName: '<name of web app>'
-        ResourceGroupName: '<name of resource group>'
+        WebAppName: 'mahima'
+        ResourceGroupName: 'test'
         SourceSlot: staging
         SwapWithProduction: true
