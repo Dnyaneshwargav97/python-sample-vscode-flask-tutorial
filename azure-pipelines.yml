@@ -49,6 +49,9 @@ stages:
       inputs:
         azureSubscription: 'Mindtree_Azure_DevOps(e9735a76-e0fb-4c01-b485-f95afa5949d0)'
         appName: 'mahima'
+        deployToSlotOrASE: true
+        resourceGroupName: 'test'
+        slotName: 'slot'
         containers: '$(containerRegistry)/$(imageRepository):$(tag)'
 
     - task: AzureAppServiceManage@0
