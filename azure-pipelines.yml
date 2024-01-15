@@ -48,7 +48,7 @@ stages:
 
     - task: AzureWebAppContainer@1
       inputs:
-        azureSubscription: 'mahima'
+        azureSubscription: 'Dnyaneshwargav97'
         appName: 'mahima'
         containers: $(containerRegistry)/$(imageRepository):$(tag)
         deployToSlotOrASE: true
@@ -57,7 +57,7 @@ stages:
 
     - task: AzureAppServiceManage@0
       inputs:
-        azureSubscription: 'mahima'
+        azureSubscription: 'Dnyaneshwargav97'
         WebAppName: 'mahima'
         ResourceGroupName: 'test'
         SourceSlot: staging
